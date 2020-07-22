@@ -31,12 +31,12 @@ if (screen.width >= 768) {
 		loadExternalResource(live2d_path + "live2d.min.js", "js"),
 		loadExternalResource(live2d_path + "waifu-tips.js", "js")
 	]).then(() => {
+		localStorage.setItem("modelId", 4);
 		initWidget({
 			waifuPath: live2d_path + "waifu-tips.json",
 			//apiPath: "https://live2d.fghrsh.net/api/",
 			cdnPath: "https://cdn.jsdelivr.net/gh/lightfish-zhang/live2d_api/"
 		});
-		loadlive2d("live2d", "https://cdn.jsdelivr.net/gh/lightfish-zhang/live2d_api/model/ShizukuTalk/shizuku-48/index.json");
 	});
 }
 // initWidget 第一个参数为 waifu-tips.json 的路径，第二个参数为 API 地址
